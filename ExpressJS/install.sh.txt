@@ -1,0 +1,4 @@
+# write the commands to install 'express' and 'jade' as dependencies
+
+sudo npm install express
+sudo npm install jade

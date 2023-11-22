@@ -1,0 +1,2 @@
+npm run ng generate component
+

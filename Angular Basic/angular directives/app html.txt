@@ -1,0 +1,10 @@
+<select [(ngModel)]="selectedDay" >
+  <option 
+  *ngFor='let day of days; let i = index' 
+  [attr.data-index]="i" 
+  [ngValue]="i">
+    {{ day.today }}
+  </option>
+</select>
+<br><br>
+<h2>{{ days[selectedDay].msg }}</h2>

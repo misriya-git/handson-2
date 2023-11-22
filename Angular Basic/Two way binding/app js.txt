@@ -1,0 +1,25 @@
+import { Component } from '@angular/core';
+
+export class Name {
+  constructor(public id: number,public first: string, public last: string){}
+
+  get fullName(): string {
+    return this.first + ' ' + this.last;
+  }
+}
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html'
+})
+export class AppComponent {
+  //Define your name object with first and last properties
+  name: Name = new Name( 1, 'John', 'Smith');
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  
+}

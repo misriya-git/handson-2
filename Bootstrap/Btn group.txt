@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grab it!!!!</title>
+	<link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./css/mystyle.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+   //write your code here
+   <div class="btn-group btn-group-lg" role="group" aria-label="">
+     <button type="button" class="btn btn-secondary">Button 1</button>
+     <button type="button" class="btn btn-secondary">Button 2</button>
+     <button type="button" class="btn btn-secondary">Button 3</button>
+   </div>
+   <div class="btn-group btn-group-sm" role="group" aria-label="">
+     <button type="button" class="btn btn-secondary">Button 1</button>
+     <button type="button" class="btn btn-secondary">Button 2</button>
+     <button type="button" class="btn btn-secondary">Button 3</button>
+   </div>
+   <div class="btn-group btn-group-xs" role="group" aria-label="">
+     <button type="button" class="btn btn-secondary">Button 1</button>
+     <button type="button" class="btn btn-secondary">Button 2</button>
+     <button type="button" class="btn btn-secondary">Button 3</button>
+   </div>
+</body>
+</html>

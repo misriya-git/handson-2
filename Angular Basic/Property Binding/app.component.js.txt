@@ -1,0 +1,14 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html'   // refer app.component.html for adding message value using property binding
+})
+export class AppComponent  implements OnInit {
+    message = 'hey there';
+//Define your message with hey there 
+  constructor() { }
+
+  ngOnInit() {
+  }
+}

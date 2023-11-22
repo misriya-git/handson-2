@@ -1,0 +1,17 @@
+import { Component } from '@angular/core';
+
+@Component({
+  // Add your code here for both selector and template
+  selector: 'app-root',
+  template: `<h1>{{title}}</h1>`,
+  styleUrls: ['./first.component.css']
+})
+export class AppComponent {
+  title = 'My first angular app';
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+}
+  

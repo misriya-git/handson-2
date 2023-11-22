@@ -1,0 +1,91 @@
+#!/bin/bash
+SCORE=0
+PASS=0
+fail=0
+TOTAL_TEST_CASES=0
+PASSED_TEST_CASES=0
+
+TEST_1=$(cat app.js | grep  -e "res.render" | wc -l )
+    TOTAL_TEST_CASES=$((TOTAL_TEST_CASES + 1))
+if [ $TEST_1 -eq 1 ]
+then 
+    SCORE=$((SCORE + 10))
+    PASSED_TEST_CASES=$((PASSED_TEST_CASES + 1))
+fi;
+
+TEST_1=$(cat app.js | grep  -e 'app.set("view engine", "jade")' | wc -l )
+    TOTAL_TEST_CASES=$((TOTAL_TEST_CASES + 1))
+if [ $TEST_1 -eq 1 ]
+then 
+    SCORE=$((SCORE + 10))
+    PASSED_TEST_CASES=$((PASSED_TEST_CASES + 1))
+fi;
+
+TEST_1=$(cat app.js | grep  -e 'option:"teachers"' | wc -l )
+    TOTAL_TEST_CASES=$((TOTAL_TEST_CASES + 1))
+if [ $TEST_1 -eq 1 ]
+then 
+    SCORE=$((SCORE + 10))
+    PASSED_TEST_CASES=$((PASSED_TEST_CASES + 1))
+fi;
+
+TEST_1=$(cat views/view.jade | grep -e 'title "Jade Template Engine"' | wc -l )
+    TOTAL_TEST_CASES=$((TOTAL_TEST_CASES + 1))
+if [ $TEST_1 -eq 1 ]
+then 
+    SCORE=$((SCORE + 10))
+    PASSED_TEST_CASES=$((PASSED_TEST_CASES + 1))
+fi;
+
+TEST_1=$(cat views/view.jade | grep -e 'h1 "Conditions and Loops in Jade"' | wc -l )
+    TOTAL_TEST_CASES=$((TOTAL_TEST_CASES + 1))
+if [ $TEST_1 -eq 1 ]
+then 
+    SCORE=$((SCORE + 10))
+    PASSED_TEST_CASES=$((PASSED_TEST_CASES + 1))
+fi;
+
+TEST_1=$(cat views/view.jade | grep -e 'if (option === "students")' | wc -l )
+    TOTAL_TEST_CASES=$((TOTAL_TEST_CASES + 1))
+if [ $TEST_1 -eq 1 ]
+then 
+    SCORE=$((SCORE + 10))
+    PASSED_TEST_CASES=$((PASSED_TEST_CASES + 1))
+fi;
+
+TEST_1=$(cat views/view.jade | grep -e 'else if (option === "teachers" )' | wc -l )
+    TOTAL_TEST_CASES=$((TOTAL_TEST_CASES + 1))
+if [ $TEST_1 -eq 1 ]
+then 
+    SCORE=$((SCORE + 10))
+    PASSED_TEST_CASES=$((PASSED_TEST_CASES + 1))
+fi;
+
+TEST_1=$(cat views/view.jade | grep -e 'p "You have entered wrong option!"' | wc -l )
+    TOTAL_TEST_CASES=$((TOTAL_TEST_CASES + 1))
+if [ $TEST_1 -eq 1 ]
+then 
+    SCORE=$((SCORE + 10))
+    PASSED_TEST_CASES=$((PASSED_TEST_CASES + 1))
+fi;
+
+TEST_1=$(cat views/view.jade | grep -e 'each name in Students' | wc -l )
+    TOTAL_TEST_CASES=$((TOTAL_TEST_CASES + 1))
+if [ $TEST_1 -eq 1 ]
+then 
+    SCORE=$((SCORE + 10))
+    PASSED_TEST_CASES=$((PASSED_TEST_CASES + 1))
+fi;
+
+TEST_1=$(cat views/view.jade | grep -e 'each name in Teachers' | wc -l )
+    TOTAL_TEST_CASES=$((TOTAL_TEST_CASES + 1))
+if [ $TEST_1 -eq 1 ]
+then 
+    SCORE=$((SCORE + 10))
+    PASSED_TEST_CASES=$((PASSED_TEST_CASES + 1))
+fi;
+
+
+echo "TOTAL_TEST_CASES:$TOTAL_TEST_CASES"
+echo "PASSED_TEST_CASES:$PASSED_TEST_CASES"
+echo "FS_SCORE:$SCORE%"

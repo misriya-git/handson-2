@@ -1,0 +1,24 @@
+const express= require('express');
+var app = express();
+
+// set 'jade' as the 'view engine'
+app.set("view engine", "jade")
+
+// render the jade template engine with the following data as parameter:
+        // option:"teachers" / "students",
+        // Students:["Athul", "Ramij", "Nil", "Satyaki", "Souvik"],
+        // Teachers :["Swarnali", "Paromita", "Poulomi", "sreejukta"]
+
+app.get('/', function (req, res) {
+    res.render
+    ('view', { 
+      option:"teachers"
+      ,
+	 Teachers :["Swarnali", "Paromita", "Poulomi", "sreejukta"]
+	});    
+});
+
+// run the application on port 8000
+var server = app.listen(8000, function () {
+    console.log('Node server is running..');
+});

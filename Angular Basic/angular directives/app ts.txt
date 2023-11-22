@@ -1,0 +1,34 @@
+import { Component } from '@angular/core';
+
+export class Day {
+  constructor(public today: string, public msg: string){}
+}
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+})
+export class AppComponent {
+  selectedDay:number;
+  show: boolean;
+  message: string;
+  selectedValue: string;
+  days: Day[];
+  //Define your variables show,message,selectedDay,selectedValue,days
+  //Define your constructor here with selectedDay as 0
+  
+ constructor() {
+  this.selectedDay = 0;
+  
+  this.days = [{ today: 'Monday', msg: 'Marvelous Mondays!' },
+  { today: 'Tuesday', msg: 'Thrilling Tuesdays!' },
+  { today: 'Wednesday', msg: 'Wonderful Wednesdays!' },
+  { today: 'Thursday', msg: 'Trendy Thursdays!' },
+  { today: 'Friday', msg: 'Fantastic Fridays!' },
+  { today: 'Saturday', msg: 'Super Saturdays!' },
+  { today: 'Sunday', msg: 'Sunny Sundays!' }];
+ }
+
+  ngOnInit() {
+  }
+}

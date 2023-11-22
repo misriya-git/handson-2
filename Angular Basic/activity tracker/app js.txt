@@ -1,0 +1,44 @@
+import { Component } from '@angular/core';
+
+export class Activity {
+  constructor(public done: boolean,public desc: string){}
+}
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  //Define your variables done,todos,newToDo,newToDoObj,error
+  //Define your constructor here with todos as [] ,newToDo as '' and error as false
+  //Define your addMore function here
+  //Define your clearAll function here
+  done: boolean;
+  todos: any;
+  newToDo: string;
+  newToDoObj: Activity;
+  error: boolean;
+  count: number;
+
+  constructor() { 
+    this.todos = [];
+    this.newToDo = '';
+    this.error = false;
+    this.count = 0;
+  }
+
+  addMore() {
+    this.newToDoObj = new Activity(this.done, this.newToDo);
+    this.todos.push(this.newToDoObj);
+  }
+
+  clearAll() {
+    this.newToDoObj = null;
+    this.todos = [];
+  }
+
+  ngOnInit() {
+  }
+}
+

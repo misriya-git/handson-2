@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+  <!--Write your code here-->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>File Uploading</title>
+</head>
+<body>
+File: <br />
+<form action="/fileUploadServlet" method="post"
+                        enctype="multipart/form-data">
+<input type="file" id="fileAttachment" name="fileAttachment" size="50" />
+<br />
+<input type="submit" id="uploadBtn" value="Upload" />
+</form>
+</body>
+</html>	
